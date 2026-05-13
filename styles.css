@@ -8,7 +8,7 @@
 body{
     
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
-                url('../multimedia/images/alfa.png');
+                url('multimedia/images/alfa.png');
     /* 2. PROPIEDADES CLAVE: Para que se vea bien */
     background-repeat: no-repeat;  /* No se duplica */
     background-size: cover;        /* Cubre todo el ancho/alto */
