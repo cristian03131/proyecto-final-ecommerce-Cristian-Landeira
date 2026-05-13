@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+<body>
+    <header class="header">
+        
+        <div class="header__imagen-logo">
+        <img src="../multimedia/images/logo.png" class="header__logo" alt="logo del reino del alfajor">
+        <h2 class="header__subtitulo">Lider en lo dulce</h2>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__enlaces">
+                <li><a href="#inicio" class="header__link">Inicio</a></li>
+                <li><a href="#acerca-de" class="header__link">Acerca de</a></li>
+                <li><a href="#productos" class="header__link">Productos</a></li>
+                <li><a href="#reseñas" class="header__link">Reseñas</a></li>
+                <li><a href="#contacto" class="header__link">Contacto</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <div class="main__contenedor-hero">
+        <section id="inicio" class="hero">
+       <div class="hero__contenido">
+        <h1 class="main__titulo">El Reino del Alfajor</h1>
+        <p class="main__subtitulo">Sabor artesanal que conquista corazones.</p>
+        <div class="hero__botones">
+           <a href="#productos" class="btn btn-primario">Explorar Sabores</a>
+           <a href="#contacto" class="btn btn-secundario">Hacer un Pedido</a>
+       </div>
+     </div>
+     </div>
+      </section>
+
+
+        <section id="acerca-de" class="main__section main__section--presentacion">
+            <h1 class="main__titulo">Presentación</h1>
+            <p class="main__parrafo">LLevamos mas de 20 años en la industria produciendo <strong>los mejores y más sabrosos alfajores de calidad en todo el pais.</strong> Somos una empresa lider en el mercado <strong>con amplia trayectoria y experiencia</strong> adaptando siempre nuestros productos a las <em>necesidades reales del cliente</em></p>
+        </section>
+
+        <section class="main__section">
+            <h3 class="main__subtitulo">Nuestra Producción</h3>
+            <video class="main__video" width="600" height="400" controls style="object-fit: cover;">
+                <source src="../multimedia/videos/presentacion.mp4" type="video/mp4">
+                <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default>
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+        <section id="productos" class="productos__section">
+        
+        <!-- Tarjeta 1: Chocolate -->
+        <article class="productos__card">
+            <img src="../multimedia/images/alfajores-chocolate.png" alt="Caja de Alfajores de chocolate" class="productos__imagen">
+            <h2 class="productos__titulo-producto">Alfajores de Chocolate</h2>
+            <p class="productos__descripcion">Deliciosos alfajores rellenos de abundante dulce de leche y cubiertos con una fina capa de chocolate.</p>
+            <div class="productos__compra">
+            <h3 class="productos__precio">$25.0000</h3>
+            <!-- Mejoramos el carrito envolviéndolo en un botón -->
+            <button class="productos__boton-carrito" aria-label="Agregar Alfajores de Chocolate al carrito">Agregar al carrito
+                <img src="../multimedia/images/icons/carrito-de-compras.png" alt="" class="productos__icono-carrito">
+            </button>
+            </div>
+        </article>
+
+        <!-- Tarjeta 2: Dulce de Leche -->
+        <article class="productos__card">
+            <img src="../multimedia/images/alfajores-dulce-de-leche.png" alt="Caja de Alfajores de dulce de leche" class="productos__imagen">
+            <h2 class="productos__titulo-producto">Alfajores de Dulce de Leche</h2>
+            <p class="productos__descripcion">Sabrosos alfajores con masa sabor dulce de leche, relleno suave y una delicada capa de azúcar glaseada.</p>
+            <div class="productos__compra">
+            <h3 class="productos__precio">$25.0000</h3>
+            <button class="productos__boton-carrito" aria-label="Agregar Alfajores de Dulce de Leche al carrito">Agregar al carrito
+                <img src="../multimedia/images/icons/carrito-de-compras.png" alt="" class="productos__icono-carrito">
+            </button>
+            </div>
+        </article>
+
+        <!-- Tarjeta 3: Surtidos -->
+        <article class="productos__card">
+            <img src="../multimedia/images/alfajores-surtidos.png" alt="Caja de degustación de Alfajores surtidos" class="productos__imagen">
+            <h2 class="productos__titulo-producto">Alfajores Surtidos</h2>
+            <p class="productos__descripcion">Nuestra caja de degustación premium: una selección única con nuestros mejores y más variados sabores.</p>
+            <div class="productos__compra">
+            <h3 class="productos__precio">$30.0000</h3>
+            <button class="productos__boton-carrito" aria-label="Agregar Alfajores Surtidos al carrito">Agregar al carrito
+                <img src="../multimedia/images/icons/carrito-de-compras.png" alt="" class="productos__icono-carrito">
+            </button>
+            </div>
+        </article>
+
+    </section>
+
+       <section id="reseñas" class="reseñas">
+    <section class="card">
+        <div class="card__usuario">
+            <img src="./multimedia/images/foto-juan.jpg" alt="Foto de Juan" class="card__foto">
+            <h4 class="card__nombre">Juan Pérez</h4>
+        </div>
+        <p class="card__opinion">"Los mejores alfajores de chocolate que probé en mi vida. ¡El relleno es una locura!"</p>
+        <div class="card__estrellas">★★★★★</div>
+    </section>
+
+    <section class="card">
+        <div class="card__usuario">
+            <img src="./multimedia/images/foto-maria.jpg" alt="Foto de Maria" class="card__foto">
+            <h4 class="card__nombre">María G.</h4>
+        </div>
+        <p class="card__opinion">"La caja surtida es ideal para regalar. La presentación es súper premium."</p>
+        <div class="card__estrellas">★★★★★</div>
+    </section>
+
+    <section class="card">
+        <div class="card__usuario">
+            <img src="./multimedia/images/foto-lucas.jpg" alt="Foto de Lucas" class="card__foto">
+            <h4 class="card__nombre">Lucas R.</h4>
+        </div>
+        <p class="card__opinion">"El de dulce de leche con glaseado es mi favorito. El envío llegó rapidísimo."</p>
+        <div class="card__estrellas">★★★★☆</div>
+    </section>
+</section>
+
+  <section id="contacto">
+   <form action="https://formspree.io/f/xjgjkjgq" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="correo electronico" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+      </section>
+    
+    </main>
+
+    <footer class="footer">
+    <div class="footer__redes">
+    <!-- Instagram -->
+    <a href="https://www.facebook.com/" target="_blank">
+        <img src="multimedia/images/icons/icono-facebook.png" alt="Facebook" class="footer__icon">
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="multimedia/images/icons/icono-instagram.png" alt="Instagram" class="footer__icon">
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/tu-numero-aqui" target="_blank">
+        <img src="multimedia/images/icons/icono-whatsapp.png" alt="WhatsApp" class="footer__icon">
+    </a>
+</div>
+    <p class="footer__parrafo">Contacto: <a href="mailto:hola@reinodelalfajor.com" class="footer__enlace">Envianos un mail</a></p>
+    
+    <address class="footer__address">
+        Dirección: Av. SiempreViva 123, Buenos Aires
+    </address>
+    
+    <p class="footer__parrafo footer__parrafo--uppercase">&copy; 2026 Reino Del Alfajor - Todos los derechos reservados</p>
+</footer>
+</body>
+</html>

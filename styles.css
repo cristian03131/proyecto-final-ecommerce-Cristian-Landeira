@@ -1,0 +1,590 @@
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
+                url('../multimedia/images/alfa.png');
+    /* 2. PROPIEDADES CLAVE: Para que se vea bien */
+    background-repeat: no-repeat;  /* No se duplica */
+    background-size: cover;        /* Cubre todo el ancho/alto */
+    background-position: center;   /* Centrada siempre */
+    background-attachment: fixed;  /* Efecto elegante (opcional, pero recomendado) */
+   
+   
+}
+
+
+/* CONTENEDORES PRINCIPALES */
+.header, .footer {
+    background-color: #f7b166;
+    padding: 20px;
+    margin: 0;
+    
+}
+
+.header{
+ display: flex;
+ gap: 110px;
+ align-items: center;
+ font-family: 'roboto' sans-serif;
+}
+
+.header__imagen-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.header__logo{
+    height: 50px;
+    width: 80px
+}
+
+.hero {
+    height: 60vh; /* Ajustamos la altura */
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+
+.main__contenedor-hero{
+display: flex;
+justify-content: center;
+margin-left: auto; 
+    margin-right: auto;
+    transform: translateX(-30px);
+}
+
+.hero__contenido {
+    width: 100%;
+    /* Usamos el mismo ancho que definimos para las secciones de abajo */
+    max-width: 940px; 
+    
+    /* Mantenemos el estilo de transparencia */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    
+    padding: 60px 40px; /* Un poco más de aire arriba y abajo lo hace ver premium */
+    border-radius: 15px;
+    margin: 0 auto; /* Lo centra perfectamente */
+    box-sizing: border-box; /* Fundamental para que el padding no sume ancho extra */
+}
+
+.main__titulo {
+    font-family: 'Montserrat', sans-serif; /* Tipografía fuerte */
+    color: #5e3203;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.main__subtitulo {
+    /* Aquí aplicamos tu idea de la cursiva */
+    font-family: 'Playfair Display', serif; /* Una tipografía con serifa elegante */
+    font-style: italic; 
+    font-size: 1.5rem;
+    color: #844c0a;
+    margin-bottom: 25px;
+}
+
+/* Estilo base para ambos botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados para un look amigable */
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+/* Botón principal (oscuro para resaltar) */
+.btn-primario {
+    background-color: #5e3203;
+    color: white !important; /* Forzamos blanco para que no se vea azul */
+}
+
+/* Botón secundario (solo borde para que no compita) */
+.btn-secundario {
+    border: 2px solid #5e3203;
+    color: #5e3203 !important;
+    background-color: transparent;
+}
+
+/* Efectos al pasar el mouse */
+.btn:hover {
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+
+/* TÍTULOS Y FUENTES */
+.main__titulo, 
+.header__subtitulo, 
+.main__subtitulo {
+    
+    color: #5e3203;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.main__subtitulo, .header__link{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.header__subtitulo{
+    font-size: 1rem;
+    
+
+}
+
+
+
+/* NAVEGACIÓN */
+.header__enlaces {
+    display: flex;
+    gap: 60px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.header__link {
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #4A2C2A;
+    transition: color 0.3s ease;
+}
+
+.header__link:hover {
+    color: #ffffff; /* El hover blanco que elegiste */
+}
+
+/* BLOQUE MAIN (EL CORAZÓN DEL SITIO) */
+.main {
+    padding: 40px 20px; 
+    max-width: 900px;  /* Para que no se estire al infinito */
+    margin: 0 auto;    /* Centra el bloque en la pantalla */
+}
+
+/*Reseteamos el margen del primer y último elemento */
+.main__section:first-child h1, 
+.main__section:first-child h2 {
+    margin-top: 0; /* Evita que el título "Presentación" sume espacio extra arriba */
+}
+
+.main__section:last-child {
+    margin-bottom: 0; /* Evita que la sección del video sume espacio extra abajo */
+}
+
+.main__titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    
+}
+
+.main__subtitulo{
+    font-size: 1.6rem;
+    
+}
+
+.main__section {
+    width: 100%;
+    max-width: 800px; /* El ancho que definimos para que coincida con el video */
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Un fondo blanco pero traslúcido */
+        /* Esto desenfoca el fondo solo DETRÁS del texto */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    opacity: 0.8;
+    
+}
+
+
+
+.main__parrafo {
+    line-height: 1.8;
+    text-align: justify; /* Para que quede parejo con los bordes del video */
+    padding-top: 20px;
+    font-family: 'Open Sans' sans-serif;
+    margin-top: 0;
+}
+
+.main__video {
+    opacity: 1;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 5px solid #f7b166;
+    
+}
+
+.productos__section{
+    display: flex;
+    
+    gap: 20px;
+}
+
+.productos__imagen {
+    width: 100%;
+}
+
+.productos__icono-carrito {
+    width: 40px;
+    
+}
+
+.productos__card{
+    width: 300px;
+    border: solid 1px #ccc;
+}
+
+.productos__titulo-producto{
+    margin-bottom: 10px; /* Espacio con el párrafo */
+    color: #ffffff;
+    font-size: 1.4rem;
+    transform: translateX(15px);
+}
+
+
+
+.productos__descripcion {
+    text-align: justify;
+    width: 300px;
+
+    color: #eeeee9; /* Blanco para máximo contraste */
+    padding: 0 15px; /* Espacio a los costados para que no toque los bordes */
+    font-size: 0.95rem;
+    line-height: 1.4; /* Mejora la lectura al separar un poco las líneas */
+    margin-bottom: 15px; /* Separa el texto del precio */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.productos__precio {
+    
+    
+    border: solid 1px #ccc;
+    text-align: center;
+    width: 40%;
+    
+
+    background-color: #28a745; 
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px; /* Bordes redondeados como tus botones */
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.productos__compra {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.productos__boton-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #827915; /*#007bff*/
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.productos__boton-carrito:hover {
+    background-color: #846a0a; /* Un tono un poco más claro o saturado que el original */
+    transform: translateY(-2px); /* Un pequeño salto hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.productos__boton-carrito:active {
+    transform: translateY(0); /* Vuelve a su lugar al presionar */
+    background-color: #5e4c06; /* Se oscurece un poco al hacer clic */
+}
+
+/* CONTENEDOR DE RESEÑAS */
+.reseñas {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Espacio entre tarjetas */
+    
+    /* EL AJUSTE CLAVE: */
+    width: 100%;           /* Que ocupe el ancho disponible */
+    max-width: 940px;      /* <--- ACÁ: Poné el mismo valor que tenga el recuadro del video */
+    margin: 0 auto;        /* Esto las centra y las mueve hacia la izquierda respecto a donde están ahora */
+    
+    padding: 40px 0;       /* Quitamos el padding lateral para que lleguen al borde */
+}
+
+/* TARJETA INDIVIDUAL */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mantiene todo centrado horizontalmente */
+    height: 100%;        /* Obliga a todas las tarjetas a medir lo mismo que la más alta */
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.85); /* Blanco traslúcido para que se vea el fondo de madera */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Preparamos la transición para el hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* EFECTO INTERACTIVO (EXTRA) */
+.card:hover {
+    transform: translateY(-10px); /* La tarjeta sube 10px */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* La sombra se vuelve más profunda */
+    background-color: white; /* Se vuelve sólida al pasar el mouse */
+}
+
+/* ESTILOS INTERNOS DE LA TARJETA */
+
+
+.card__nombre {
+    font-family: 'Montserrat', sans-serif;
+    color: #5e3203;
+    margin-bottom: 10px;
+}
+
+.card__opinion {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.card__estrellas {
+    margin-top: auto;    /* <--- ESTA ES LA MAGIA: Empuja las estrellas al fondo */
+    padding-top: 15px;   /* Un poquito de aire por si el texto es muy largo */
+    color: #f7b166;
+}
+
+.card__foto {
+    width: 70px;          /* Un tamaño fijo para que todas sean iguales */
+    height: 70px;         /* Debe ser igual al ancho para que sea un cuadrado perfecto */
+    border-radius: 50%;   /* El truco mágico para hacerla redonda */
+    object-fit: cover;    /* IMPORTANTE: Evita que la foto se estire o se deforme */
+    margin-bottom: 15px;  /* Espacio con el nombre */
+    border: 3px solid #f7b166; /* Opcional: un borde naranja para que resalte */
+}
+
+
+/* ESTILOS DEL FORMULARIO */
+#contacto {
+    /* Cambiamos 600px por el ancho de tus reseñas y video */
+    width: 100%; 
+    max-width: 940px; 
+    
+    margin: 40px auto; /* Lo mantiene centrado */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column; /* Elementos uno debajo del otro */
+}
+
+#contacto label {
+    font-family: 'Montserrat', sans-serif;
+    color: #5e3203;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#contacto input, 
+#contacto textarea {
+    padding: 12px;
+    margin-bottom: 20px; /* Espacio entre campos */
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    /* TRANSICIÓN: Para que el cambio de color sea suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO FOCUS: Cuando el usuario hace clic para escribir */
+#contacto input:focus, 
+#contacto textarea:focus {
+    border-color: #f7b166; /* El naranja de tu marca */
+    box-shadow: 0 0 8px rgba(247, 177, 102, 0.4);
+}
+
+#contacto button {
+    background-color: #5e3203;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+    background-color: #f7b166;
+    color: #5e3203;
+}
+
+
+@media (max-width: 768px) {
+    /* ... (mantén lo que ya pusimos del header y reseñas) ... */
+
+    #contacto {
+        width: 90%; /* Ocupa casi todo el ancho en móviles */
+        padding: 20px; /* Padding más ajustado para pantallas chicas */
+    }
+
+    #contacto input, 
+    #contacto textarea {
+        width: 100%; /* Ocupan el 100% del ancho disponible */
+        margin-bottom: 15px; /* Separación para que no queden pegados */
+    }
+}
+
+/* FOOTER Y DIRECCIÓN */
+.footer {
+    display: flex;
+    flex-direction: column; /* Para que los textos del footer queden uno abajo del otro */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Agrupamos los elementos de texto para alinearlos a la izquierda */
+.footer__parrafo, 
+.footer__address {
+ font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    text-align: left;       /* Alinea el inicio de las palabras */
+    width: 100%;            /* Ocupa el ancho para poder alinearse */
+    max-width: fit-content; /* Se ajusta al texto mas largo */
+    margin: 0 auto;         /* Centra el bloque resultante */
+}
+.footer__redes {
+    display: flex;
+    gap: 30px;
+}
+
+.footer__icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.main__parrafo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+}
+
+.footer__address {
+    font-style: normal; /* Para que no salga en cursiva */
+}
+
+.footer__parrafo--uppercase {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.footer__enlace {
+    color: #5e3203;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        height: auto;           /* Permite que el naranja crezca hacia abajo */
+        padding: 15px 10px;     /* Un poco de aire */
+        display: flex;          /* Aseguramos que sea flex */
+        flex-direction: column; /* Apilamos logo arriba y menú abajo */
+        gap: 15px;              /* Reducimos el gap de 110px a solo 15px */
+    }
+
+    .header__enlaces {
+        display: flex;
+        flex-direction: row;    /* Enlaces uno al lado del otro */
+        flex-wrap: wrap;        /* Si no caben, bajan solitos */
+        justify-content: center;
+        gap: 15px;              /* Espacio pequeño entre botones */
+        width: 100%;
+        padding: 0;
+    }
+
+    .header__link {
+        font-size: 14px;        /* Letra más chica para que entre todo */
+        padding: 5px;
+    }
+
+    /* Ajuste para que el logo y el texto del logo no se amontonen */
+    .header__imagen-logo {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* --- RESEÑAS RESPONSIVAS --- */
+    .reseñas {
+        grid-template-columns: 1fr; /* Una sola columna */
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    /* Video responsivo */
+    .main__video {
+        max-width: 100%;
+        height: auto;
+    }
+}
