@@ -9,11 +9,10 @@ body{
     
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
                 url('multimedia/images/alfa.png');
-    /* 2. PROPIEDADES CLAVE: Para que se vea bien */
     background-repeat: no-repeat;  /* No se duplica */
     background-size: cover;        /* Cubre todo el ancho/alto */
     background-position: center;   /* Centrada siempre */
-    background-attachment: fixed;  /* Efecto elegante (opcional, pero recomendado) */
+    background-attachment: fixed; 
    
    
 }
@@ -49,7 +48,7 @@ body{
 }
 
 .hero {
-    height: auto; /* Ajustamos la altura */
+    height: auto; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -70,7 +69,7 @@ margin-left: auto;
 
 .hero__contenido {
    width: 100%;
-    max-width: 900px; /* <--- Antes tenías 940px. Cambialo a 800px */
+    max-width: 900px; 
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     padding: 60px 40px; 
@@ -88,8 +87,8 @@ margin-left: auto;
 }
 
 .main__subtitulo {
-    /* Aquí aplicamos tu idea de la cursiva */
-    font-family: 'Playfair Display', serif; /* Una tipografía con serifa elegante */
+    
+    font-family: 'Playfair Display', serif; 
     font-style: italic; 
     font-size: 1.5rem;
     color: #844c0a;
@@ -101,7 +100,7 @@ margin-left: auto;
     display: inline-block;
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 50px; /* Bordes redondeados para un look amigable */
+    border-radius: 50px; 
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: all 0.3s ease;
@@ -111,7 +110,7 @@ margin-left: auto;
 /* Botón principal (oscuro para resaltar) */
 .btn-primario {
     background-color: #5e3203;
-    color: white !important; /* Forzamos blanco para que no se vea azul */
+    color: white !important; 
 }
 
 /* Botón secundario (solo borde para que no compita) */
@@ -157,7 +156,7 @@ margin-left: auto;
 .header__enlaces {
     
    display: flex;
-    flex-wrap: wrap; /* Los enlaces también deben poder envolverse */
+    flex-wrap: wrap;
     justify-content: center;
     padding: 0;
     list-style: none;
@@ -189,7 +188,7 @@ margin-left: auto;
     margin: 0 auto;    /* Centra el bloque en la pantalla */
 }
 
-/*Reseteamos el margen del primer y último elemento */
+/*Se resetea el margen del primer y último elemento */
 .main__section:first-child h1, 
 .main__section:first-child h2 {
     margin-top: 0; /* Evita que el título "Presentación" sume espacio extra arriba */
@@ -214,7 +213,7 @@ margin-left: auto;
 
 .main__section {
     width: 100%;
-    max-width: 900px; /* El ancho que definimos para que coincida con el video */
+    max-width: 900px;
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.7); /* Un fondo blanco pero traslúcido */
         /* Esto desenfoca el fondo solo DETRÁS del texto */
@@ -277,7 +276,7 @@ margin-left: auto;
     color: #ffffff;
     font-size: 1.4rem;
     text-align: center; /* Asegura que el título acompañe al párrafo centrado */
-    transform: translateX(0); /* <--- RESETEAMOS ESTO a 0 */
+    transform: translateX(0); 
 }
 
 
@@ -319,7 +318,6 @@ margin-left: auto;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    /* quitamos el margin-top: 10px; para que no fuerce espacios fijos */
     width: 100%;
     margin-top: auto; /* IMPORTANTE: Esto empuja todo el bloque de compra al fondo */
 }
@@ -363,11 +361,11 @@ margin-left: auto;
     gap: 30px; /* Espacio entre tarjetas */
     
     /* EL AJUSTE CLAVE: */
-    width: 100%;           /* Que ocupe el ancho disponible */
-    max-width: 940px;      /* <--- ACÁ: Poné el mismo valor que tenga el recuadro del video */
-    margin: 0 auto;        /* Esto las centra y las mueve hacia la izquierda respecto a donde están ahora */
+    width: 100%;          
+    max-width: 940px;      
+    margin: 0 auto;        
     
-    padding: 40px 0;       /* Quitamos el padding lateral para que lleguen al borde */
+    padding: 40px 0;      
 }
 
 /* TARJETA INDIVIDUAL */
@@ -383,7 +381,7 @@ margin-left: auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     
-    /* Preparamos la transición para el hover */
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
@@ -413,27 +411,25 @@ margin-left: auto;
 }
 
 .card__estrellas {
-    margin-top: auto;    /* <--- ESTA ES LA MAGIA: Empuja las estrellas al fondo */
+    margin-top: auto;    
     padding-top: 15px;   /* Un poquito de aire por si el texto es muy largo */
     color: #f7b166;
 }
 
 .card__foto {
     width: 70px;          /* Un tamaño fijo para que todas sean iguales */
-    height: 70px;         /* Debe ser igual al ancho para que sea un cuadrado perfecto */
-    border-radius: 50%;   /* El truco mágico para hacerla redonda */
+    height: 70px;         
+    border-radius: 50%;   
     object-fit: cover;    /* IMPORTANTE: Evita que la foto se estire o se deforme */
     margin-bottom: 15px;  /* Espacio con el nombre */
-    border: 3px solid #f7b166; /* Opcional: un borde naranja para que resalte */
+    border: 3px solid #f7b166; /*un borde naranja para que resalte */
 }
 
 
 /* ESTILOS DEL FORMULARIO */
 #contacto {
-    /* Cambiamos 600px por el ancho de tus reseñas y video */
     width: 100%; 
     max-width: 940px; 
-    
     margin: 40px auto; /* Lo mantiene centrado */
     padding: 30px;
     background: rgba(255, 255, 255, 0.9);
@@ -465,11 +461,20 @@ margin-left: auto;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+
 /* EFECTO FOCUS: Cuando el usuario hace clic para escribir */
 #contacto input:focus, 
 #contacto textarea:focus {
-    border-color: #f7b166; /* El naranja de tu marca */
+    border-color: #f7b166; 
     box-shadow: 0 0 8px rgba(247, 177, 102, 0.4);
+}
+
+#contacto textarea {
+    resize: none; 
+    
+   
+   
 }
 
 #contacto button {
@@ -542,7 +547,7 @@ margin-left: auto;
 }
 
 .footer__address {
-    font-style: normal; /* Para que no salga en cursiva */
+    font-style: normal; 
 }
 
 .footer__parrafo--uppercase {
@@ -560,12 +565,12 @@ margin-left: auto;
 
 @media (max-width: 1050px) {
     .header__link {
-        font-size: 14px; /* Achicamos un poco la fuente */
-        padding: 0 10px; /* Reducimos el espacio lateral */
+        font-size: 14px; 
+        padding: 0 10px; 
     }
     
     .header__subtitulo {
-        display: none; /* Podrías ocultar el "Lider en lo dulce" para ganar espacio */
+        display: none; 
     }
 }
 
@@ -578,7 +583,7 @@ margin-left: auto;
 
     .productos__card {
         width: 100%;       
-        max-width: 400px;  /* Le damos un poco más de ancho para que el texto respire */
+        max-width: 400px;  /* Le doy un poco más de ancho para que el texto respire */
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -587,7 +592,7 @@ margin-left: auto;
     }
 
     .productos__titulo-producto {
-        transform: translateX(0); /* Forzamos que el título no se desplace a la derecha */
+        transform: translateX(0);
         text-align: center;
         width: 100%;
         padding: 0 10px;
@@ -600,10 +605,10 @@ margin-left: auto;
 
     .productos__descripcion {
         text-align: center !important; /* El !important asegura que mate al 'justify' del bloque general */
-        max-width: 320px;   /* Limitamos el ancho del párrafo para que las líneas rompan de forma elegante */
+        max-width: 320px;   /* Se limita el ancho del párrafo para que las líneas rompan de forma elegante */
         margin: 0 auto 20px auto; /* Centra el bloque del párrafo y le da aire abajo */
         padding: 0 10px;
-        display: block;     /* Cambiamos flex por block para que el alineado center funcione mejor */
+        display: block;     /*Se cambia flex por block para que el alineado center funcione mejor */
     }
 
     .productos__compra {
@@ -622,7 +627,7 @@ margin-left: auto;
         height: auto;           /* Permite que el naranja crezca hacia abajo */
         padding: 15px 10px;     /* Un poco de aire */
         display: flex;          /* Aseguramos que sea flex */
-        flex-direction: column; /* Apilamos logo arriba y menú abajo */
+        flex-direction: column; /* Se apila logo arriba y menú abajo */
         gap: 15px;              /* Reducimos el gap de 110px a solo 15px */
     }
 
@@ -664,7 +669,7 @@ margin-left: auto;
     .main {
         width: 95%; /* <--- Esto garantiza que siempre haya un pequeño margen a los lados */
         max-width: 700px; /* <--- Limita el ancho para que no crezca tanto en tablets */
-        padding: 20px 10px; /* Reducimos el padding para ganar espacio interno */
+        padding: 20px 10px; /* Se reduce el padding para ganar espacio interno */
         margin: 0 auto;
     }
     
@@ -685,7 +690,7 @@ margin-left: auto;
 }
 
 @media (max-width: 600px) {
-    /* 1. Header: Apilamos logo y navegación */
+    /* 1. Header: Se apila logo y navegación */
     .header {
         flex-direction: column;
         gap: 15px;
@@ -699,7 +704,7 @@ margin-left: auto;
     }
 
     .productos__card {
-        width: 90%; /* Que ocupen casi todo el ancho disponible */
+        width: 90%; 
         max-width: 350px;
     }
 
