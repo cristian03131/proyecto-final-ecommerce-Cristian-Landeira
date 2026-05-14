@@ -273,27 +273,27 @@ margin-left: auto;
 }
 
 .productos__titulo-producto{
-    margin-bottom: 10px; /* Espacio con el párrafo */
+    margin-bottom: 15px; 
     color: #ffffff;
     font-size: 1.4rem;
-    transform: translateX(15px);
+    text-align: center; /* Asegura que el título acompañe al párrafo centrado */
+    transform: translateX(0); /* <--- RESETEAMOS ESTO a 0 */
 }
 
 
 
 .productos__descripcion {
-    display: flex;
-    text-align: justify;
+   
+   text-align: center;
    width: 100%; /* Ocupa el ancho de la tarjeta */
     max-width: 300px; /* Pero no se estira de más */
     color: #eeeee9; /* Blanco para máximo contraste */
-    padding: 0 15px; /* Espacio a los costados para que no toque los bordes */
+    padding: 0 25px; /* Espacio a los costados para que no toque los bordes */
     font-size: 0.95rem;
-    line-height: 1.4; /* Mejora la lectura al separar un poco las líneas */
-    margin-bottom: 15px; /* Separa el texto del precio */
+    line-height: 1.6; /* Mejora la lectura al separar un poco las líneas */
+    margin-bottom: 20px; /* Separa el texto del precio */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     justify-content: center;
-    flex-wrap: wrap;
+    
 }
 
 
@@ -569,7 +569,53 @@ margin-left: auto;
     }
 }
 
+@media (max-width: 887px) {
+    .productos__section {
+        flex-direction: column; /* Apila las tarjetas */
+        align-items: center;    /* Las centra */
+        gap: 30px;
+    }
 
+    .productos__card {
+        width: 100%;       
+        max-width: 400px;  /* Le damos un poco más de ancho para que el texto respire */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra todo el contenido interno de la tarjeta */
+        
+    }
+
+    .productos__titulo-producto {
+        transform: translateX(0); /* Forzamos que el título no se desplace a la derecha */
+        text-align: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .productos__boton-carrito {
+    /* ... tus otros estilos ... */
+    margin-top: 10px; /* Reduce el espacio entre el precio y el botón */
+}
+
+    .productos__descripcion {
+        text-align: center !important; /* El !important asegura que mate al 'justify' del bloque general */
+        max-width: 320px;   /* Limitamos el ancho del párrafo para que las líneas rompan de forma elegante */
+        margin: 0 auto 20px auto; /* Centra el bloque del párrafo y le da aire abajo */
+        padding: 0 10px;
+        display: block;     /* Cambiamos flex por block para que el alineado center funcione mejor */
+    }
+
+    .productos__compra {
+        width: 100%;
+        align-items: center;
+    }
+
+    .productos__precio {
+        width: auto; /* Que el botón de precio se ajuste al texto en móviles */
+        min-width: 120px;
+    }
+}
 @media (max-width: 768px) {
 
     .header {
