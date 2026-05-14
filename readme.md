@@ -1,30 +1,45 @@
-Nombre del Proyecto: Reino del Alfajor
+🍫 El Reino del Alfajor
+¡Bienvenido al repositorio de El Reino del Alfajor! Este proyecto es una landing page desarrollada para practicar las bases fundamentales del desarrollo web moderno.
 
-Descripción:
-Este proyecto es una página web básica desarrollada como parte de un curso de Front-End.
-La página está estructurada con HTML semántico y utiliza las etiquetas `<header>`,
-`<main>`, y `<footer>` para organizar el contenido. El objetivo es aprender a crear la
-estructura básica de una página web y prepararla para futuras mejoras con CSS y
-JavaScript.
+🎯 Objetivo del Proyecto
+Este proyecto fue desarrollado como parte de la capacitación en el curso de Front-End JS de Talento Tech. El propósito principal fue construir una interfaz web funcional y atractiva, aplicando conceptos de HTML5 Semántico y CSS3 (específicamente Flexbox y Media Queries). Es un ejercicio práctico para dominar la estructura de navegación, secciones de contenido y adaptabilidad en diferentes dispositivos (Responsive Design).
 
-Configuración de Formspree
+🛠️ Tecnologías Utilizadas
+HTML5: Uso de etiquetas semánticas (<header>, <main>, <section>, <footer>) para mejorar el SEO y la accesibilidad.
 
-Para el formulario de contacto de este proyecto, se integró la herramienta Formspree.
+CSS3: Implementación de layouts dinámicos con Flexbox, gradientes personalizados y diseño responsivo.
 
-¿Cómo se configuró?
+Google Fonts: Integración de tipografías como Montserrat y Poppins para una identidad visual sólida.
 
-Se creó un formulario en el dashboard de Formspree vinculado a mi correo electrónico.
-Se copió el "Endpoint" (la URL única) y se pegó en el atributo action de la etiqueta <form> en el archivo contacto.html.
-Se aseguró que el método de envío fuera method="POST".
-Se asignó el atributo name a cada campo (nombre, email, mensaje) para que los datos lleguen identificados correctamente al correo.
+🚀 Características Principales
+Diseño Responsive: La página se adapta correctamente a monitores, tablets y teléfonos móviles (ajustes específicos para puntos críticos como 850px y 768px).
 
-¿Por qué es útil?
+Sección de Productos: Tarjetas interactivas con efectos de hover y diseño equilibrado.
 
-Formspree es una herramienta fundamental para desarrolladores Front-End que están aprendiendo, ya que permite que un formulario estático (solo HTML) funcione y envíe correos reales sin necesidad de programar un servidor (Back-End) con PHP, Node.js o bases de datos. Facilita la interactividad de forma rápida y segura.
+Testimonios: Sección de reseñas de clientes utilizando un sistema de cuadrícula (Grid) y fotos de perfil circulares.
 
-Inspección de Tabla
-Siguiendo la consigna, se utilizó la herramienta de inspección del navegador (F12) para verificar:
+Formulario de Contacto Funcional: Integración con Formspree, permitiendo recibir mensajes directamente por correo electrónico sin necesidad de un backend propio.
 
-Estructura: Confirmación de que el colspan ocupa el ancho total de la tabla.
-Box Model: Ajuste de bordes y alineación del texto centrado en la fila de mensajes pendientes.
-Estilos: Prueba de cambios de color en caliente para mejorar la legibilidad de los datos de contacto.
+📧 Configuración de Contacto (Formspree)
+Para habilitar el envío de correos, se realizaron los siguientes pasos:
+
+Dashboard: Creación de un formulario vinculado a mi email en Formspree.
+
+Atributo Action: Inserción del Endpoint único en la etiqueta <form>.
+
+Método POST: Configuración de method="POST" para el envío seguro de datos.
+
+Atributos Name: Cada campo (nombre, email, mensaje) cuenta con su atributo name para la correcta identificación de los datos recibidos.
+
+👨‍💻 Autor
+Cristian Landeira
+
+Análista de Sistemas
+
+Estudiante de la tecnicatura en desarrollo de software en formación
+
+Full Stack Developer en formación (apx).
+
+Participante del programa Talento Tech (Front-End JS).
+
+https://github.com/cristian03131
