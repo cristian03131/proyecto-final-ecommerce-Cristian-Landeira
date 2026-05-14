@@ -31,7 +31,9 @@ body{
  display: flex;
  gap: 110px;
  align-items: center;
+ 
  font-family: 'roboto' sans-serif;
+ flex-wrap: wrap;
 }
 
 .header__imagen-logo{
@@ -47,37 +49,35 @@ body{
 }
 
 .hero {
-    height: 60vh; /* Ajustamos la altura */
-    width: 97%;
+    height: auto; /* Ajustamos la altura */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    opacity: 0.6;
+   
+    padding-bottom: 20px;
+    opacity: 0.8;
 }
 
 .main__contenedor-hero{
 display: flex;
 justify-content: center;
 margin-left: auto; 
+   max-width: 900px;
     margin-right: auto;
-    transform: translateX(-30px);
 }
 
 .hero__contenido {
-    width: 100%;
-    /* Usamos el mismo ancho que definimos para las secciones de abajo */
-    max-width: 940px; 
-    
-    /* Mantenemos el estilo de transparencia */
+   width: 100%;
+    max-width: 900px; /* <--- Antes tenías 940px. Cambialo a 800px */
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
-    
-    padding: 60px 40px; /* Un poco más de aire arriba y abajo lo hace ver premium */
+    padding: 60px 40px; 
     border-radius: 15px;
-    margin: 0 auto; /* Lo centra perfectamente */
-    box-sizing: border-box; /* Fundamental para que el padding no sume ancho extra */
+    margin: 0 auto; 
+    box-sizing: border-box;
+   
 }
 
 .main__titulo {
@@ -155,10 +155,19 @@ margin-left: auto;
 
 /* NAVEGACIÓN */
 .header__enlaces {
-    display: flex;
-    gap: 60px;
+    
+   display: flex;
+    flex-wrap: wrap; /* Los enlaces también deben poder envolverse */
+    justify-content: center;
+    padding: 0;
     list-style: none;
-    font-size: 1.2rem;
+    gap: 20px; /* Espacio entre palabras */
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center; /* Centra el UL horizontalmente */
+    flex-grow: 0.5;           /* Hace que el nav se expanda para empujar al logo a la izquierda */
 }
 
 .header__link {
@@ -202,13 +211,14 @@ margin-left: auto;
     
 }
 
+
 .main__section {
     width: 100%;
-    max-width: 800px; /* El ancho que definimos para que coincida con el video */
+    max-width: 900px; /* El ancho que definimos para que coincida con el video */
     margin-bottom: 20px;
     background: rgba(255, 255, 255, 0.7); /* Un fondo blanco pero traslúcido */
         /* Esto desenfoca el fondo solo DETRÁS del texto */
-    padding: 30px;
+    padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     opacity: 0.8;
@@ -227,12 +237,14 @@ margin-left: auto;
 
 .main__video {
     opacity: 1;
-    width: 100%;
-    max-width: 800px;
+    width: 800px;
+    max-width: 100%;
     border-radius: 10px;
     border: 5px solid #f7b166;
     
 }
+
+
 
 .productos__section{
     display: flex;
@@ -250,8 +262,14 @@ margin-left: auto;
 }
 
 .productos__card{
-    width: 300px;
+   width: 300px;
     border: solid 1px #ccc;
+    /* AGREGÁ ESTO: */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el título/imagen arriba y el botón abajo */
+    background: rgba(0, 0, 0, 0.5); /* Para que el texto se lea mejor sobre la madera */
+    
 }
 
 .productos__titulo-producto{
@@ -264,16 +282,20 @@ margin-left: auto;
 
 
 .productos__descripcion {
+    display: flex;
     text-align: justify;
-    width: 300px;
-
+   width: 100%; /* Ocupa el ancho de la tarjeta */
+    max-width: 300px; /* Pero no se estira de más */
     color: #eeeee9; /* Blanco para máximo contraste */
     padding: 0 15px; /* Espacio a los costados para que no toque los bordes */
     font-size: 0.95rem;
     line-height: 1.4; /* Mejora la lectura al separar un poco las líneas */
     margin-bottom: 15px; /* Separa el texto del precio */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     justify-content: center;
+    flex-wrap: wrap;
 }
+
 
 .productos__precio {
     
@@ -295,10 +317,11 @@ margin-left: auto;
 .productos__compra {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    /* quitamos el margin-top: 10px; para que no fuerce espacios fijos */
+    width: 100%;
+    margin-top: auto; /* IMPORTANTE: Esto empuja todo el bloque de compra al fondo */
 }
 
 .productos__boton-carrito {
@@ -318,6 +341,7 @@ margin-left: auto;
     font-weight: bold;
     letter-spacing: 0.5px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: auto;
 }
 
 /* EFECTO HOVER */
@@ -534,7 +558,16 @@ margin-left: auto;
 
 
 
-
+@media (max-width: 1050px) {
+    .header__link {
+        font-size: 14px; /* Achicamos un poco la fuente */
+        padding: 0 10px; /* Reducimos el espacio lateral */
+    }
+    
+    .header__subtitulo {
+        display: none; /* Podrías ocultar el "Lider en lo dulce" para ganar espacio */
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -582,9 +615,51 @@ margin-left: auto;
         padding: 20px;
     }
 
+    .main {
+        width: 95%; /* <--- Esto garantiza que siempre haya un pequeño margen a los lados */
+        max-width: 700px; /* <--- Limita el ancho para que no crezca tanto en tablets */
+        padding: 20px 10px; /* Reducimos el padding para ganar espacio interno */
+        margin: 0 auto;
+    }
+    
+    .main__section{
+        width: 100%;
+        padding: 20px; /* Padding más compacto para que el video respire */
+    }
+
     /* Video responsivo */
     .main__video {
-        max-width: 100%;
+       /* Ocupa todo el ancho de su contenedor (.main__section) */
+    max-width: 100%;   /* No permite que se desborde */
+    height: 300px;      /* Mantiene la proporción original (16:9 generalmente) */
+    display: block;    /* Elimina espacios fantasma abajo del video */
+    margin: 0 auto;
+}
+    
+}
+
+@media (max-width: 600px) {
+    /* 1. Header: Apilamos logo y navegación */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 2. Productos: Una sola columna */
+    .productos__section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .productos__card {
+        width: 90%; /* Que ocupen casi todo el ancho disponible */
+        max-width: 350px;
+    }
+
+    /* 3. Ajuste de imágenes para que no se deformen */
+    .productos__imagen {
+        width: 100%;
         height: auto;
     }
 }
