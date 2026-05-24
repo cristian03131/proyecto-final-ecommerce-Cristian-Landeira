@@ -8,7 +8,7 @@
 body{
     
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), 
-                url('multimedia/images/alfa.png');
+                url('../multimedia/images/alfa.png');
     background-repeat: no-repeat;  /* No se duplica */
     background-size: cover;        /* Cubre todo el ancho/alto */
     background-position: center;   /* Centrada siempre */
@@ -160,13 +160,13 @@ margin-left: auto;
     justify-content: center;
     padding: 0;
     list-style: none;
-    gap: 20px; /* Espacio entre palabras */
+    gap: 30px; /* Espacio entre palabras */
 }
 
 .header__nav {
     display: flex;
     justify-content: center; /* Centra el UL horizontalmente */
-    flex-grow: 0.5;           /* Hace que el nav se expanda para empujar al logo a la izquierda */
+    flex-grow: 0.5;           
 }
 
 .header__link {
