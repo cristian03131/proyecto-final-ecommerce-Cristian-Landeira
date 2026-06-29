@@ -3,21 +3,24 @@
     "id": 1,
     "img": "/multimedia/images/alfajores-chocolate.png",
     "nombre": "Alfajores de Chocolate",
-    "descripcion": "El clásico rey de la casa: doble galletita artesanal con un abundante corazón de dulce de leche, bañado en el más puro chocolate semiamargo.",
-    "precio": 21000
+    "descripcion": "Deliciosos alfajores rellenos de abundante dulce de leche y cubiertos con una fina capa de chocolate.",
+    "precio": 21000,
+    "icon":"/multimedia/images/icons/carrito-de-compras.png"
   },
   {
     "id": 2,
     "img": "/multimedia/images/alfajores-dulce-de-leche.png",
     "nombre": "Alfajores de Dulce de Leche",
     "descripcion": "Sabrosos alfajores con masa sabor dulce de leche, relleno suave y una delicada capa de azúcar glaseada",
-    "precio": 25000
+    "precio": 25000,
+    "icon":"/multimedia/images/icons/carrito-de-compras.png"
   },
   {
     "id": 3,
     "img": "/multimedia/images/alfajores-surtidos.png",
     "nombre": "Alfajores Surtidos",
     "descripcion": "Nuestra caja de degustación premium: una selección única con nuestros mejores y más variados sabores.",
-    "precio": 30000
+    "precio": 30000,
+    "icon":"/multimedia/images/icons/carrito-de-compras.png"
   }
 ]
