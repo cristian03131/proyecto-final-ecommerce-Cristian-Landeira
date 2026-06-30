@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>Opiniones de Clientes - El Reino del Alfajor</title>
-</head>
-<body>
-    <header class="header">
+  </head>
+  <body>
+     <header class="header">
         <div class="header__imagen-logo">
             <img src="../multimedia/images/logo.png" class="header__logo" alt="logo del reino del alfajor">
             <h2 class="header__subtitulo">Lider en lo dulce</h2>
@@ -20,7 +20,7 @@
                 <li><a href="../index.html" class="header__link">Inicio</a></li>
                 <li><a href="acerca-de.html" class="header__link">Acerca de</a></li>
                 <li><a href="productos.html" class="header__link">Productos</a></li>
-                <li><a href="reseñas.html" class="header__link">Reseñas</a></li>
+                <li><a href="resenas.html" class="header__link">Reseñas</a></li>
                 <li><a href="contacto.html" class="header__link">Contacto</a></li>
                 <li>
                 <a href="./carrito.html" class="carrito-icono">
@@ -30,37 +30,22 @@
             </ul>
         </nav>
     </header>
-    
-    <main class="main">
-        <section id="reseñas" class="reseñas">
-            <section class="card">
-                <div class="card__usuario">
-                    <img src="../multimedia/images/foto-juan.jpg" alt="Foto de Juan" class="card__foto">
-                    <h4 class="card__nombre">Juan Pérez</h4>
-                </div>
-                <p class="card__opinion">"Los mejores alfajores de chocolate que probé en mi vida. ¡El relleno es una locura!"</p>
-                <div class="card__estrellas">★★★★★</div>
-            </section>
 
-            <section class="card">
-                <div class="card__usuario">
-                    <img src="../multimedia/images/foto-maria.jpg" alt="Foto de Maria" class="card__foto">
-                    <h4 class="card__nombre">María G.</h4>
-                </div>
-                <p class="card__opinion">"La caja surtida es ideal para regalar. La presentación es súper premium."</p>
-                <div class="card__estrellas">★★★★★</div>
-            </section>
+    <main>
+      <h1>Carrito de compras</h1>
+      <section id="contenedor-carrito" class="contenedor-tarjetas">
+        <!-- Productos del carrito -->
+      </section>
 
-            <section class="card">
-                <div class="card__usuario">
-                    <img src="../multimedia/images/foto-lucas.jpg" alt="Foto de Lucas" class="card__foto">
-                    <h4 class="card__nombre">Lucas R.</h4>
-                </div>
-                <p class="card__opinion">"El de dulce de leche con glaseado es mi favorito. El envío llegó rapidísimo."</p>
-                <div class="card__estrellas">★★★★☆</div>
-            </section>
-        </section>
+      <div id="acciones-carrito" class="acciones-carrito">
+        <!-- Botones de eliminar y finalizar compra se agregan desde JS -->
+      </div>
+
+      <section id="resumen-carrito">
+        <!-- Aca ira el resumen del carrito -->
+      </section>
     </main>
+
 
     <footer class="footer">
         <div class="footer__redes">
@@ -72,5 +57,8 @@
         <address class="footer__address">Dirección: Av. SiempreViva 123, Buenos Aires</address>
         <p class="footer__parrafo footer__parrafo--uppercase">&copy; 2026 Reino Del Alfajor - Todos los derechos reservados</p>
     </footer>
-</body>
+
+    <!--👉 Agregar type module y enlace al carrito.js -->
+    <script type="module" src="../js/carrito.js"></script>
+  </body>
 </html>
