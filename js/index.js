@@ -1,4 +1,5 @@
 import { obtenerCarrito } from "./storage.js";
+import { agregarCarrito } from "./funcionesCarrito.js";
 
 const renderizarProductos = async() => {
     const contenedor = document.getElementById("productos");
@@ -42,6 +43,9 @@ const renderizarProductos = async() => {
        iconoCarrito.src = `../${alfajor.icon}`;
        iconoCarrito.alt = `Icono de carrito de compras`;
 
+      botonAgregarCarrito.addEventListener("click", ()=>{
+        agregarCarrito(alfajor);
+      })
        
        botonAgregarCarrito.appendChild(iconoCarrito);
        alfajoresCompra.append(precioAlfajor,botonAgregarCarrito);
@@ -50,7 +54,7 @@ const renderizarProductos = async() => {
 
        contenedor.appendChild(tarjetaAlfajores);
        
-       
+
 
     })
 
