@@ -1,5 +1,6 @@
 import { obtenerCarrito } from "./storage.js";
 import { agregarCarrito } from "./funcionesCarrito.js";
+import { actualizarCarrito } from "./ui.js";
 
 const renderizarProductos = async() => {
     const contenedor = document.getElementById("productos");
@@ -62,4 +63,8 @@ const renderizarProductos = async() => {
     
 }
 
-renderizarProductos();
+document.addEventListener("DOMContentLoaded", () => {
+  const carrito = obtenerCarrito();
+  actualizarCarrito(carrito.length);
+  renderizarProductos();
+});
