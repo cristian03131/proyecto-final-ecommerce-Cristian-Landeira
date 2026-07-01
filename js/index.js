@@ -3,6 +3,13 @@ import { agregarCarrito } from "./funcionesCarrito.js";
 import { actualizarCarrito } from "./ui.js";
 
 const renderizarProductos = async() => {
+  /*
+    const mainProd = document.getElementById("main--productos");
+    const tituloMain = document.createElement("h2");
+    tituloMain = "Mis Productos";
+    tituloMain.classList.add("main--productos__titulo");
+    mainProd.appendChild(tituloMain);
+*/
     const contenedor = document.getElementById("productos");
 
 

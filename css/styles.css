@@ -47,6 +47,13 @@ body{
     width: 80px
 }
 
+.header__carrito-icono {
+   
+    margin-left: auto; /* ¡Pum! Empuja el carrito todo lo posible hacia la derecha */
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
 .hero {
     height: auto; 
     width: 100%;
@@ -243,12 +250,35 @@ margin-left: auto;
     
 }
 
-
-
-.productos__section{
+.Titulo-Carrito{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 2.5rem;
     display: flex;
+    justify-content: center;
+    color:#ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.main--productos{
+    max-width: 95%; /* Le da casi todo el ancho de la pantalla, igual que al carrito */
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.main--productos__section {
+    display: grid;
+    
+    /* 🚀 LA MAGIA RESONSIVE: Crea columnas automáticas de mínimo 300px (el ancho de tu tarjeta) 
+       y distribuye el espacio sobrante de forma idéntica */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     
     gap: 20px;
+    
+    /* Mantiene la separación impecable que ya tenías */
+    
+    
+    
+    width: 100%;
 }
 
 .productos__imagen {

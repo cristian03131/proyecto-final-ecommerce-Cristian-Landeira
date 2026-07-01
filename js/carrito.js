@@ -7,6 +7,7 @@ const renderizarCarrito = () => {
     actualizarCarrito(carrito.length);
 
     const contenedor = document.getElementById("contenedor-carrito")
+    contenedor.classList.add("main--productos__section"); 
     const contenedorAcciones = document.getElementById("acciones-carrito");
 
     contenedor.innerHTML = "";
